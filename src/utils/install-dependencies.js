@@ -7,7 +7,6 @@ var fnInstallSFDX = function(){
     execCommand.run('mkdir', ['-p', 'sfdx-cli']);
     execCommand.run('tar', ['xJf', 'sf-linux-x64.tar.xz', '-C', 'sfdx-cli', '--strip-components', '1']);
     execCommand.run('export', ['export PATH=~/sfdx-cli/bin:$PATH']);
-    execCommand.run('PATH=~/sfdx-cli/bin:$PATH',[]);
     core.info('=== SFDX cli installed ===');
 };
 
