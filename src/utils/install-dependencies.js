@@ -13,12 +13,12 @@ const execCommand = require('./exec-command.js');
 
 var fnInstallSFDX = function(){
     core.info('=== Downloading and installing SFDX cli ===');
-    execCommand.run('wget', ['https://developer.salesforce.com/media/salesforce-cli/sfdx/versions/7.209.6/8ba3197/sfdx-v7.209.6-8ba3197-linux-x64.tar.xz']);
+    execCommand.run('npm install', ['--global', 'sfdx-cli']);
     //execCommand.run('wget', ['https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz']);
-    execCommand.run('mkdir', ['-p', 'sfdx-cli']);
-    execCommand.run('tar', ['xJf', 'sfdx-v7.209.6-8ba3197-linux-x64.tar.xz', '-C', 'sfdx-cli', '--strip-components', '1']);
+    //execCommand.run('mkdir', ['-p', 'sfdx-cli']);
+    //execCommand.run('tar', ['xJf', 'sfdx-v7.209.6-8ba3197-linux-x64.tar.xz', '-C', 'sfdx-cli', '--strip-components', '1']);
     //execCommand.run('tar', ['xJf', 'sfdx-linux-amd64.tar.xz', '-C', 'sfdx-cli', '--strip-components', '1']);
-    execCommand.run('./sfdx-cli/install', []);
+    //execCommand.run('./sfdx-cli/install', []);
     core.info('=== SFDX cli installed ===');
 };
 
